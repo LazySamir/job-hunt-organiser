@@ -11,3 +11,4 @@ will randomly assign you activities to do to help you attain a job.
 - click a button to randomly choose an activity
 - connect with google calendar
 - automatically fill in google calendar with randomly selected activity
+- view total and individual hours worked on activities
