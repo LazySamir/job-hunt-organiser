@@ -4,6 +4,8 @@ will randomly assign you activities to do to help you attain a job.
 
 [![Waffle.io - Issues in progress](https://badge.waffle.io/LazySamir/job-hunt-organiser.png?label=in%20progress&title=In%20Progress)](http://waffle.io/LazySamir/job-hunt-organiser)
 
+[![Build Status](https://travis-ci.org/LazySamir/job-hunt-organiser.svg?branch=master)](https://travis-ci.org/LazySamir/job-hunt-organiser)
+
 ### Requirements
 - able to create an account
 - able to log in
