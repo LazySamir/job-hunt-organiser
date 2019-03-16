@@ -5,11 +5,61 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <% if current_user %>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+      <img src="/images/Logo2.png" alt="">
+    </a>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">My Profile</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <a class="nav-link" href="/users/sign_out" data-method="delete">Logout</a>
+            </ul>
+        </div>
+    </div>
+</nav>
+<% else %>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<div class="container">
+  <a class="navbar-brand" href="#">
+  <img src="/images/Logo2.png" alt="">
+</a>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <a class="navbar-brand" href="#">
+          <img src="/images/Logo2.png" alt="">
+        </a>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">My Profile</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <a id="loggedIn" class="nav-link" href="/users/sign_up">Sign Up</a>
+      <a class="nav-link" href="/users/sign_in">Login</a>
+    </div>
+  </div>
+</nav>
+<% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

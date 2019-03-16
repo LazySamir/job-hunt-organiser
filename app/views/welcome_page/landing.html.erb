@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Welcome</h2>
+      <div id="user_nav">
+      <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>
+      <% else %>
+          <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+      <% end %>
+      <div>
+        <h3>Select what to work on today:</h3>
+        <ul>Programming</ul>
+        <ul>Job-hunting</ul>
+        <ul>Market Yourself</ul>
+        <ul>Self-Care & Self Management</ul>
+        </div>
+  </div>
+  </body>
+</html>
